@@ -7,6 +7,11 @@ function xyz_link_tbap_future_to_publish($new_status, $old_status, $post){
 	if(!isset($GLOBALS['tbap_dup_publish']))
 		$GLOBALS['tbap_dup_publish']=array();
 	$postid =$post->ID;
+	$post_published_date_time=$post_modified_date_time=time();
+	if ($post) {
+		$post_published_date_time = strtotime(get_the_date('Y-m-d H:i:s', $postid));
+		$post_modified_date_time = strtotime(get_the_modified_date('Y-m-d H:i:s', $postid));
+	}
 	$get_post_meta=get_post_meta($postid,"xyz_tbap",true);
 	
 	$post_tumblr_permission=get_option('xyz_tbap_tbpost_permission');
@@ -26,7 +31,22 @@ function xyz_link_tbap_future_to_publish($new_status, $old_status, $post){
 			if($new_status == 'publish')
 			{
 				if ($get_post_meta == 1 ) {
+					if(get_option('xyz_tbap_default_selection_edit')==0)
 					return;
+				}
+				else //prevent backend publish
+				{
+					//post meta not 1, edited post
+					if (($post_modified_date_time != $post_published_date_time) && $old_status=='publish' ) 
+					{//already plublished being edited
+						if ((get_option('xyz_tbap_default_selection_edit') == 0))
+							return;
+					}
+					else //post meta not 1, new post 
+					{
+						if ((get_option('xyz_tbap_default_selection_create') == 0))
+						return;
+					}
 				}
 			}
 			else return;
@@ -52,18 +72,20 @@ function xyz_tbap_link_publish($post_ID) {
 	$messagetopost='';
 	$post_tumblr_permission=get_option('xyz_tbap_tbpost_permission');
 	$get_post_meta_future_data=get_post_meta($post_ID,"xyz_tbap_future_to_publish",true);
-	if(isset($_POST['xyz_tbap_tbpost_permission']))
-	$post_tumblr_permission=intval($_POST['xyz_tbap_tbpost_permission']);
-	elseif(!empty($get_post_meta_future_data) && get_option('xyz_tbap_default_selection_edit')==2 )///select values from post meta
+	
+	$get_post_meta=get_post_meta($post_ID,"xyz_tbap",true);
+	if(!empty($get_post_meta_future_data) && ((get_option('xyz_tbap_default_selection_edit')==2 && $get_post_meta==1) || (get_option('xyz_tbap_default_selection_create')==2 && $get_post_meta!=1 )))///select values from post meta
 	{
 		$post_tumblr_permission=$get_post_meta_future_data['post_tumblr_permission'];
 		$post_tumblr_media_permission=$get_post_meta_future_data['xyz_tbap_tbpost_media_permission'];
 		$messagetopost=$get_post_meta_future_data['xyz_tbap_tbmessage'];
 	}
+	if(isset($_POST['xyz_tbap_tbpost_permission']))
+	$post_tumblr_permission=intval($_POST['xyz_tbap_tbpost_permission']);
 	if ($post_tumblr_permission != 1) {
 		$_POST=$_POST_CPY;
 		return ;
-	} else if(( (isset($_POST['_inline_edit'])) || (isset($_REQUEST['bulk_edit'])) )  && (get_option('xyz_tbap_default_selection_edit') == 0) ) {
+	} else if(( (isset($_POST['_inline_edit'])) || (isset($_REQUEST['bulk_edit'])) )  && (get_option('xyz_tbap_default_selection_edit') == 0 && $get_post_meta==1) ) {
 		$_POST=$_POST_CPY;
 		return;
 	}
@@ -239,7 +261,7 @@ function xyz_tbap_link_publish($post_ID) {
 		
 			$substring=str_replace('{POST_TITLE}', $name, $messagetopost);
 			$substring=str_replace('{BLOG_TITLE}', $caption,$substring);
-			$substring=str_replace('{PERMALINK}', $link, $substring);
+			$substring=str_replace('{PERMALINK}', ' '.$link.' ', $substring);
 			$substring=str_replace('{POST_EXCERPT}', $excerpt, $substring);
 			$substring=str_replace('{POST_CONTENT}', $description, $substring);
 			$substring=str_replace('{USER_NICENAME}', $user_nicename, $substring);

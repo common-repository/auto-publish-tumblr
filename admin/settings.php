@@ -479,21 +479,22 @@ function xyz_tbap_dethide(id)
 				</tr>
 				<tr valign="top">
 
-					<td scope="row" colspan="1" width="50%"> <?php _e('Auto publish on editing posts/pages/custom post types','auto-publish-tumblr'); ?>
+					<td scope="row" colspan="1" width="50%"> <?php _e('Auto publish on creating posts/pages/custom post types','auto-publish-tumblr'); ?>
 					</td>
 					<td>
-						<input type="radio" name="xyz_tbap_default_selection_edit" value="1" <?php if($xyz_tbap_default_selection_edit=='1') echo 'checked';?>/>Enabled
-						<br/><input type="radio" name="xyz_tbap_default_selection_edit" value="0" <?php if($xyz_tbap_default_selection_edit=='0') echo 'checked';?>/>Disabled
-						<br/><input type="radio" name="xyz_tbap_default_selection_edit" value="2" <?php  if($xyz_tbap_default_selection_edit==2) echo 'checked';?>/>Use settings from post creation or post updation
+						<input type="radio" name="xyz_tbap_default_selection_create" value="1" <?php if($xyz_tbap_default_selection_create=='1') echo 'checked';?>/><?php _e('Enabled','auto-publish-tumblr'); ?> 
+						<br/><input type="radio" name="xyz_tbap_default_selection_create" value="0" <?php if($xyz_tbap_default_selection_create=='0') echo 'checked';?>/><?php _e('Disabled','auto-publish-tumblr'); ?> 
+						<br/><input type="radio" name="xyz_tbap_default_selection_create" value="2" <?php  if($xyz_tbap_default_selection_create== '2') echo 'checked';?>/><?php _e('Use metabox settings','auto-publish-tumblr'); ?> 
 					</td>
 				</tr>
 				<tr valign="top">
 
-					<td scope="row" colspan="1" width="50%"> <?php _e('Auto publish on creating posts/pages/custom post types','auto-publish-tumblr'); ?>
+					<td scope="row" colspan="1" width="50%"> <?php _e('Auto publish on editing posts/pages/custom post types','auto-publish-tumblr'); ?>
 					</td>
 					<td>
-						<input type="radio" name="xyz_tbap_default_selection_create" value="1" <?php if($xyz_tbap_default_selection_create=='1') echo 'checked';?>/>Enabled
-						<br/><input type="radio" name="xyz_tbap_default_selection_create" value="0" <?php if($xyz_tbap_default_selection_create=='0') echo 'checked';?>/>Disabled
+						<input type="radio" name="xyz_tbap_default_selection_edit" value="1" <?php if($xyz_tbap_default_selection_edit=='1') echo 'checked';?>/><?php _e('Enabled','auto-publish-tumblr'); ?> 
+						<br/><input type="radio" name="xyz_tbap_default_selection_edit" value="0" <?php if($xyz_tbap_default_selection_edit=='0') echo 'checked';?>/><?php _e('Disabled','auto-publish-tumblr'); ?> 
+						<br/><input type="radio" name="xyz_tbap_default_selection_edit" value="2" <?php  if($xyz_tbap_default_selection_edit=='2') echo 'checked';?>/><?php _e('Use metabox settings','auto-publish-tumblr'); ?> 
 					</td>
 				</tr>
 				<tr valign="top">

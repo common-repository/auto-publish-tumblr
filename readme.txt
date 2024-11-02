@@ -3,8 +3,8 @@ Contributors: f1logic
 Donate link: https://xyzscripts.com/donate/
 Tags:  tumblr, tumblr auto publish, wp tumblr auto publish, publish post to tumblr, add link to tumblr, add image to tumblr, tumblr publishing, post to tumblr, social media auto publish, social media publishing, social network auto publish, social media, social network
 Requires at least: 3.0
-Tested up to: 6.4.3
-Stable tag: 1.2.2
+Tested up to: 6.6.2
+Stable tag: 1.2.4
 License: GPLv2 or later
 
 Publish posts automatically to Tumblr.
@@ -124,6 +124,14 @@ You need to purchase the premium version to use this feature.
 4. Auto publish logs.
 
 == Changelog ==
+
+= WP Tumblr Auto Publish 1.2.4 =
+Fixed reported compatibility issues
+
+= WP Tumblr Auto Publish 1.2.3 =
+New settings value "Use metabox settings" added for "Auto publish on creating posts/pages/custom post types" to handle draft and scheduled posts
+Bug fix: Backend post updates now follow publishing settings
+Gutenberg and classical editor compatibility issues fixed
 
 = WP Tumblr Auto Publish 1.2.2 =
 Patch security vulnerability

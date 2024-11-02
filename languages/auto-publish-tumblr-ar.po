@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: multilang\n"
-"POT-Creation-Date: 2022-07-11 11:46+0530\n"
-"PO-Revision-Date: 2022-07-11 11:46+0530\n"
+"POT-Creation-Date: 2024-10-01 12:37+0530\n"
+"PO-Revision-Date: 2024-10-01 12:38+0530\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: ar\n"
@@ -11,7 +11,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
-"X-Generator: Poedit 3.1.1\n"
+"X-Generator: Poedit 3.4\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-KeywordsList: _e;__\n"
 "X-Poedit-SearchPath-0: admin/suggest_feature.php\n"
@@ -42,8 +42,8 @@ msgstr ""
 #: admin/about.php:15
 #, php-format
 msgid ""
-"If you would like to have more features , please try <a href=\"%s\" target="
-"\"_blank\">%s</a> which is a premium version of this plugin. We have "
+"If you would like to have more features , please try <a href=\"%s\" "
+"target=\"_blank\">%s</a> which is a premium version of this plugin. We have "
 "included a quick comparison of the free and premium plugins for your "
 "reference."
 msgstr ""
@@ -92,7 +92,7 @@ msgstr "ينكدين"
 msgid "Instagram"
 msgstr "انستغرام"
 
-#: admin/about.php:71 admin/metabox.php:226
+#: admin/about.php:71 admin/metabox.php:292
 msgid "Tumblr"
 msgstr "نعرفكم"
 
@@ -108,80 +108,80 @@ msgstr "خيارات الإرسال"
 msgid "Publish to facebook pages"
 msgstr "انشر على صفحات الفيسبوك"
 
-#: admin/about.php:100
-msgid "Publish to facebook groups"
-msgstr "انشر في مجموعات الفيسبوك"
-
-#: admin/about.php:109
+#: admin/about.php:101
 msgid "Publish to twitter profile"
 msgstr "انشر على تويتر الشخصي"
 
-#: admin/about.php:118
+#: admin/about.php:110
 msgid "Publish to linkedin profile/company pages"
 msgstr "انشر على صفحات الملف الشخصي / الشركة المرتبطة"
 
-#: admin/about.php:127
+#: admin/about.php:119
 msgid "Publish to instagram Business accounts"
 msgstr "انشر على حسابات الأعمال في انستغرام"
 
-#: admin/about.php:137
+#: admin/about.php:129
 msgid "Publish to tumblr profile"
 msgstr "انشر في ملف تعريف نعرفكم"
 
-#: admin/about.php:146
+#: admin/about.php:138
 msgid "Publish to pinterest boards"
 msgstr "انشر على بينتيريست المجالس"
 
-#: admin/about.php:155
+#: admin/about.php:147
 msgid "Option to add twitter image description for visually impaired people"
 msgstr "خيار إضافة وصف صورة Twitter للأشخاص ضعاف البصر"
 
-#: admin/about.php:164
+#: admin/about.php:156
 msgid "Option to republish existing posts"
 msgstr "خيار لإعادة نشر الوظائف الحالية"
 
-#: admin/about.php:173
+#: admin/about.php:165
 msgid "Publish to multiple social media accounts"
 msgstr "انشر على حسابات وسائط اجتماعية متعددة"
 
-#: admin/about.php:182
+#: admin/about.php:174
 msgid ""
 "Seperate message formats for publishing to multiple social media accounts"
 msgstr "تنسيق رسالة منفصل للنشر على حسابات وسائط اجتماعية متعددة"
 
-#: admin/about.php:191
+#: admin/about.php:183
 msgid "Save auto publish settings of individual posts"
 msgstr "حفظ إعدادات النشر التلقائي للمشاركات الفردية"
 
-#: admin/about.php:200
+#: admin/about.php:192
 msgid ""
 "Hash Tags support for Facebook, Twitter, Linkedin, Instagram, Pinterest and "
 "Tumblr"
 msgstr ""
 "دعم علامات التجزئة لـ فيسبوك و تويتر و ينكدين والانستغرام و بينتيريست و تمبلر"
 
-#: admin/about.php:209
+#: admin/about.php:201
 msgid "Option to use post tags as hash tags"
 msgstr "خيار لاستخدام علامة المنشور كعلامات تصنيف"
 
-#: admin/about.php:218
+#: admin/about.php:210
+msgid "Option to use post categories as hash tags"
+msgstr "خيار لاستخدام فئات المنشورات كعلامات تجزئة"
+
+#: admin/about.php:219
 msgid "Enable/Disable SSL peer verification"
 msgstr "تمكين / تعطيل التحقق من الأقران SSL"
 
-#: admin/about.php:228
+#: admin/about.php:229
 msgid "Image Options"
 msgstr "خيارات الصورة"
 
-#: admin/about.php:229
+#: admin/about.php:230
 msgid "Publish images along with post content"
 msgstr "نشر الصور مع محتوى آخر"
 
-#: admin/about.php:238
+#: admin/about.php:239
 msgid ""
 "Separate default image url for publishing to multiple social media accounts"
 msgstr "عنوان url افتراضي منفصل للصورة للنشر على حسابات وسائط اجتماعية متعددة"
 
-#: admin/about.php:247
+#: admin/about.php:248
 msgid ""
 "Option to specify preference from featured image, post content, post meta "
 "and open graph tags"
@@ -189,38 +189,39 @@ msgstr ""
 "خيار لتحديد التفضيل من الصورة المميزة ومحتوى المنشور ونشر التعريف وفتح "
 "علامات الرسم البياني"
 
-#: admin/about.php:256
+#: admin/about.php:257
 msgid ""
 "Publish multiple images to facebook, tumblr, linkedin and twitter along with "
 "post content"
 msgstr "انشر صورًا متعددة على فيسبوك و تمبلر و ينكدين و تويتر مع محتوى المنشور"
 
-#: admin/about.php:265
+#: admin/about.php:266
 msgid "Option to specify multiphoto preference from post content and post meta"
 msgstr "خيار لتحديد تفضيل متعدد الصور من محتوى المنشور ونشر التعريف"
 
-#: admin/about.php:275
+#: admin/about.php:276
 msgid "Video/Audio Options"
 msgstr "خيارات الفيديو / الصوت"
 
-#: admin/about.php:276
+#: admin/about.php:277
 msgid ""
-"Publish video to facebook, tumblr, Linkedin, Instagram and twitter along "
-"with post content"
+"Publish video to facebook, tumblr, Linkedin, Pinterest, Instagram and "
+"twitter along with post content"
 msgstr ""
-"انشر الفيديو على فيسبوك و نعرفكم و ينكدين و الانستغرام و تويتر مع محتوى النشر"
+"انشر الفيديو على Facebook وtumblr وLinkedin وPinterest وInstagram وtwitter "
+"بالإضافة إلى محتوى النشر"
 
-#: admin/about.php:285
+#: admin/about.php:286
 msgid ""
 "Option to specify preference from post content, post meta and open graph tags"
 msgstr ""
 "خيار لتحديد التفضيل من محتوى المنشور ونشر التعريف وفتح علامات الرسم البياني"
 
-#: admin/about.php:294
+#: admin/about.php:295
 msgid "Publish audio to tumblr along with post content"
 msgstr "انشر الصوت إلى نعرفكم جنبًا إلى جنب مع محتوى النشر"
 
-#: admin/about.php:303
+#: admin/about.php:304
 msgid ""
 "Option to specify audio preference from  post content, post meta and open "
 "graph tags"
@@ -228,143 +229,143 @@ msgstr ""
 "خيار لتحديد تفضيلات الصوت من محتوى المنشور ونشر التعريف وفتح علامات الرسم "
 "البياني"
 
-#: admin/about.php:313
+#: admin/about.php:314
 msgid "Filter Options"
 msgstr "خيارات التصفية"
 
-#: admin/about.php:314
+#: admin/about.php:315
 msgid "Filter posts to publish based on categories"
 msgstr "تصفية المشاركات للنشر على أساس الفئات"
 
-#: admin/about.php:323
+#: admin/about.php:324
 msgid "Filter posts to publish based on custom post types"
 msgstr "تصفية المشاركات للنشر على أساس أنواع المنشورات المخصصة"
 
-#: admin/about.php:332
+#: admin/about.php:333
 msgid "Filter posts to publish based on sticky posts"
 msgstr "تصفية المشاركات للنشر على أساس المنشورات اللاصقة"
 
-#: admin/about.php:341
+#: admin/about.php:342
 msgid "Configuration to enable/disable page publishing"
 msgstr "التكوين لتمكين / تعطيل نشر الصفحة"
 
-#: admin/about.php:350
+#: admin/about.php:351
 msgid "Category filter for individual accounts"
 msgstr "مرشح الفئات للحسابات الفردية"
 
-#: admin/about.php:359
+#: admin/about.php:360
 msgid "Custom post type filter for individual accounts"
 msgstr "عامل تصفية نوع المنشور المخصص للحسابات الفردية"
 
-#: admin/about.php:368
+#: admin/about.php:369
 msgid "Enable/Disable page publishing for individual accounts"
 msgstr "تمكين / تعطيل نشر الصفحة للحسابات الفردية"
 
-#: admin/about.php:377
+#: admin/about.php:378
 msgid "Override auto publish scheduling for individual accounts"
 msgstr "تجاوز جدولة النشر التلقائي للحسابات الفردية"
 
-#: admin/about.php:386
+#: admin/about.php:387
 msgid "Override auto publish based on sticky posts for individual accounts"
 msgstr "تجاوز النشر التلقائي بناءً على المنشورات الثابتة للحسابات الفردية"
 
-#: admin/about.php:396
+#: admin/about.php:397
 msgid "Scheduling"
 msgstr "الجدولة"
 
-#: admin/about.php:397
+#: admin/about.php:398
 msgid "Instantaneous post publishing"
 msgstr "النشر الفوري"
 
-#: admin/about.php:406
+#: admin/about.php:407
 msgid "Scheduled post publishing using cron"
 msgstr "نشر المنشور المجدول باستخدام cron"
 
-#: admin/about.php:415
+#: admin/about.php:416
 msgid "Status summary of auto publish tasks by mail"
 msgstr "ملخص حالة مهام النشر التلقائي عن طريق البريد"
 
-#: admin/about.php:424
+#: admin/about.php:425
 msgid "Configurable auto publishing time interval"
 msgstr "الفاصل الزمني للنشر التلقائي القابل للتكوين"
 
-#: admin/about.php:434
+#: admin/about.php:435
 msgid "Publishing History"
 msgstr "تاريخ النشر"
 
-#: admin/about.php:435
+#: admin/about.php:436
 msgid "View auto publish history"
 msgstr "عرض محفوظات النشر التلقائي"
 
-#: admin/about.php:444
+#: admin/about.php:445
 msgid "View auto publish error logs"
 msgstr "عرض سجلات خطأ النشر التلقائي"
 
-#: admin/about.php:453
+#: admin/about.php:454
 msgid "Option to republish post"
 msgstr "خيار إعادة نشر آخر"
 
-#: admin/about.php:462
+#: admin/about.php:463
 msgid "Option to reschedule publishing"
 msgstr "خيار إعادة جدولة النشر"
 
-#: admin/about.php:472
+#: admin/about.php:473
 msgid "Installation and Support"
 msgstr "التثبيت والدعم"
 
-#: admin/about.php:473
+#: admin/about.php:474
 msgid "Free Installation"
 msgstr "تركيب مجاني"
 
-#: admin/about.php:482
+#: admin/about.php:483
 msgid "Privilege customer support"
 msgstr "امتياز دعم العملاء"
 
-#: admin/about.php:492
+#: admin/about.php:493
 msgid "Addon Features"
 msgstr "ميزات الملحق"
 
-#: admin/about.php:493
+#: admin/about.php:494
 msgid "Advanced Autopublish Scheduler"
 msgstr "جدولة النشر التلقائي المتقدمة"
 
-#: admin/about.php:502
+#: admin/about.php:503
 msgid "URL-Shortener"
 msgstr "URL- shortener"
 
-#: admin/about.php:511
+#: admin/about.php:512
 msgid "Privilege Management"
 msgstr "إدارة الامتياز"
 
-#: admin/about.php:520
+#: admin/about.php:521
 msgid "Other"
 msgstr "آخر"
 
-#: admin/about.php:521
+#: admin/about.php:522
 msgid "Price"
 msgstr "سعر"
 
-#: admin/about.php:522
+#: admin/about.php:523
 msgid "FREE"
 msgstr "مجانيا"
 
-#: admin/about.php:523
+#: admin/about.php:524
 msgid "Starts from 39 USD"
 msgstr "يبدأ من 39 دولارًا أمريكيًا"
 
-#: admin/about.php:524
+#: admin/about.php:525
 msgid "Starts from 69 USD"
 msgstr "يبدأ من 69 دولارًا أمريكيًا"
 
-#: admin/about.php:527
+#: admin/about.php:528
 msgid "Purchase"
 msgstr "شراء"
 
-#: admin/about.php:529
+#: admin/about.php:530
 msgid "Buy Now"
 msgstr "اشتري الآن"
 
-#: admin/about.php:535
+#: admin/about.php:536
 msgid "Pinterest is added on experimental basis."
 msgstr "تمت إضافة بينتيريست على أساس تجريبي."
 
@@ -547,75 +548,75 @@ msgstr "سجل"
 msgid "Suggest a Feature"
 msgstr "اقترح ميزة"
 
-#: admin/metabox.php:233 admin/settings.php:172
+#: admin/metabox.php:299 admin/settings.php:172
 msgid "Enable auto publish posts to my tumblr account"
 msgstr "تمكين النشر التلقائي للمنشورات إلى حسابي في Tumblr"
 
-#: admin/metabox.php:236 admin/settings.php:175 admin/settings.php:382
-#: admin/settings.php:392 admin/settings.php:503 admin/settings.php:545
-#: admin/settings.php:555
+#: admin/metabox.php:302 admin/settings.php:175 admin/settings.php:382
+#: admin/settings.php:392 admin/settings.php:505 admin/settings.php:547
+#: admin/settings.php:557
 msgid "Yes"
 msgstr "نعم"
 
-#: admin/metabox.php:237 admin/metabox.php:244 admin/settings.php:176
+#: admin/metabox.php:303 admin/metabox.php:310 admin/settings.php:176
 #: admin/settings.php:228 admin/settings.php:383 admin/settings.php:393
-#: admin/settings.php:504 admin/settings.php:546 admin/settings.php:556
+#: admin/settings.php:506 admin/settings.php:548 admin/settings.php:558
 msgid "No"
 msgstr "لا"
 
-#: admin/metabox.php:241 admin/settings.php:224
+#: admin/metabox.php:307 admin/settings.php:224
 msgid "Attachment to be posted to Tumblr"
 msgstr "المرفق ليتم نشره على Tumblr"
 
-#: admin/metabox.php:245 admin/settings.php:229
+#: admin/metabox.php:311 admin/settings.php:229
 msgid "Image"
 msgstr "صورة"
 
-#: admin/metabox.php:246 admin/settings.php:230
+#: admin/metabox.php:312 admin/settings.php:230
 msgid "Link"
 msgstr "وصلة"
 
-#: admin/metabox.php:252 admin/settings.php:235
+#: admin/metabox.php:318 admin/settings.php:235
 msgid "Message format for posting"
 msgstr "تنسيق الرسالة للنشر"
 
-#: admin/metabox.php:256 admin/settings.php:239
+#: admin/metabox.php:322 admin/settings.php:239
 msgid "Insert the title of your post."
 msgstr "أدخل عنوان المنشور الخاص بك."
 
-#: admin/metabox.php:257 admin/settings.php:240
+#: admin/metabox.php:323 admin/settings.php:240
 msgid "Insert the URL where your post is displayed."
 msgstr "أدخل عنوان URL حيث يتم عرض منشورك."
 
-#: admin/metabox.php:258 admin/settings.php:241
+#: admin/metabox.php:324 admin/settings.php:241
 msgid "Insert the excerpt of your post."
 msgstr "أدخل مقتطف من رسالتك."
 
-#: admin/metabox.php:259 admin/settings.php:242
+#: admin/metabox.php:325 admin/settings.php:242
 msgid "Insert the description of your post."
 msgstr "أدخل وصف منشورك."
 
-#: admin/metabox.php:260 admin/settings.php:243
+#: admin/metabox.php:326 admin/settings.php:243
 msgid "Insert the name of your blog."
 msgstr "أدخل اسم مدونتك."
 
-#: admin/metabox.php:261 admin/settings.php:244
+#: admin/metabox.php:327 admin/settings.php:244
 msgid "Insert the nicename of the author."
 msgstr "أدخل اسم المؤلف."
 
-#: admin/metabox.php:262 admin/settings.php:245
+#: admin/metabox.php:328 admin/settings.php:245
 msgid "Insert the ID of your post."
 msgstr "أدخل معرف منشورك."
 
-#: admin/metabox.php:263 admin/settings.php:246
+#: admin/metabox.php:329 admin/settings.php:246
 msgid "Insert the publish date of your post."
 msgstr "أدخل تاريخ نشر رسالتك."
 
-#: admin/metabox.php:264 admin/settings.php:247
+#: admin/metabox.php:330 admin/settings.php:247
 msgid "Insert the display name of the author."
 msgstr "أدخل اسم عرض المؤلف."
 
-#: admin/metabox.php:269 admin/settings.php:251
+#: admin/metabox.php:335 admin/settings.php:251
 msgid "Select"
 msgstr "انتقى"
 
@@ -758,27 +759,39 @@ msgstr "لا شيء"
 msgid "Auto publish on editing posts/pages/custom post types"
 msgstr "النشر التلقائي عند تحرير المنشورات / الصفحات / أنواع المنشورات المخصصة"
 
+#: admin/settings.php:485 admin/settings.php:495
+msgid "Enabled"
+msgstr "حسنًا ، تمكين"
+
+#: admin/settings.php:486 admin/settings.php:496
+msgid "Disabled"
+msgstr "عاجز"
+
+#: admin/settings.php:487 admin/settings.php:497
+msgid "Use metabox settings"
+msgstr "الاعدادات العامة"
+
 #: admin/settings.php:492
 msgid "Auto publish on creating posts/pages/custom post types"
 msgstr "النشر التلقائي عند إنشاء منشورات / صفحات / أنواع منشورات مخصصة"
 
-#: admin/settings.php:501
+#: admin/settings.php:503
 msgid "Enable SSL peer verification in remote requests"
 msgstr "تمكين التحقق من الأقران SSL في الطلبات البعيدة"
 
-#: admin/settings.php:509
+#: admin/settings.php:511
 msgid "Apply filters during publishing"
 msgstr "تطبيق المرشحات أثناء النشر"
 
-#: admin/settings.php:542
+#: admin/settings.php:544
 msgid "Enable credit link to author"
 msgstr "تمكين ارتباط الائتمان للمؤلف"
 
-#: admin/settings.php:552
+#: admin/settings.php:554
 msgid "Enable premium version ads"
 msgstr "تمكين الإصدار المتميز للإعلانات"
 
-#: admin/settings.php:565
+#: admin/settings.php:567
 msgid "Update Settings"
 msgstr "تحديث الاعدادات"
 

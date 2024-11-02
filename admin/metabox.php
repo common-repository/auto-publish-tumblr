@@ -22,7 +22,7 @@ if(isset($_GET['action']) && $_GET['action']=="edit" && !empty($_GET['post'])) /
 		}
 		global $wpdb;
 		$table='posts';
-		$accountCount = $wpdb->query($wpdb->prepare( 'SELECT * FROM '.$wpdb->prefix.$table.' WHERE id=%d and post_status!=%s LIMIT %d,%d',array($postid,'draft',0,1) )) ;
+		$accountCount = $wpdb->query($wpdb->prepare( 'SELECT * FROM '.$wpdb->prefix.$table.' WHERE id=%d and post_status NOT IN (%s, %s) LIMIT %d,%d',array($postid,'draft','future',0,1) )) ;
 		if($accountCount>0){
 			$GLOBALS['edit_flag']=1;
 			}
@@ -67,42 +67,70 @@ function xyz_tbap_addpostmetatags()
 //		$xyz_tbap_catlist=implode(',', $xyz_tbap_catlist);
 	?>
 <script>
+
+/****************** Code to reload metabox in Gutenberg editor ******************/
 jQuery(document).ready(function($) {
-    const appuntiStatusChange = ( function(){
-        const isSavingMetaBoxes = wp.data.select( 'core/edit-post' ).isSavingMetaBoxes;
-        var wasSaving = false;
-        return {
-            refreshMetabox: function(){
-                var isSaving = isSavingMetaBoxes();
-                if ( wasSaving && ! isSaving ) {
+	// Check if the document body is available and if we're on a block editor page
+const isBlockEditorPage = document.body && document.body.classList.contains('block-editor-page');
+// Ensure wp and necessary methods are available
+if (isBlockEditorPage && 
+	typeof wp !== 'undefined' && 
+	wp.blocks && 
+	wp.data && 
+	typeof wp.data.select('core/notices') === 'object' && 
+	typeof wp.data.select('core/editor') === 'object' && 
+	typeof wp.data.select('core/editor').getCurrentPost === 'function' &&
+	typeof wp.data.select('core/notices').getNotices === 'function') {
+		wp.data.subscribe(() => { 
+
+		const notices = wp.data.select( 'core/notices' ).getNotices(); 
+		const publishSuccessNotice = notices.find( notice => notice.content === 'Post published.' || notice.content === 'Post updated.');
+		const editorSelect = wp.data.select('core/editor');
+        if (editorSelect && typeof editorSelect.getCurrentPost === 'function') {
+		const currentPostStatus = wp.data.select('core/editor').getCurrentPost().status;
+		if (publishSuccessNotice && currentPostStatus === 'publish') 
+			{
+                
+
                     var xyz_tbap_default_selection_edit="<?php echo esc_html(get_option('xyz_tbap_default_selection_edit'));?>";
+                    
                     if(xyz_tbap_default_selection_edit==0 && jQuery("input[name='xyz_tbap_tbpost_permission']:checked").val()==1) {
+                    
                         document.getElementById("tbmf_tbap").style.display='none';
                     	document.getElementById("tbmftarea_tbap").style.display='none';
                     	document.getElementById("tbai_tbap").style.display='none';		
+                    	
                     	jQuery('#xyz_tbap_tbpost_permission_0').prop('checked',true);
+                    	
                     	jQuery('#xyz_tbap_tbpost_permission_yes').removeClass('xyz_tbap_toggle_on');
                     	jQuery('#xyz_tbap_tbpost_permission_yes').addClass('xyz_tbap_toggle_off');
+                    	
                     	jQuery('#xyz_tbap_tbpost_permission_no').removeClass('xyz_tbap_toggle_off');
                     	jQuery('#xyz_tbap_tbpost_permission_no').addClass('xyz_tbap_toggle_on');                    	                    
                     }
                     else if(xyz_tbap_default_selection_edit==1 && jQuery("input[name='xyz_tbap_tbpost_permission']:checked").val()==0) {
+                    
                     	document.getElementById("tbmf_tbap").style.display='';
                     	document.getElementById("tbmftarea_tbap").style.display='';
                     	document.getElementById("tbai_tbap").style.display='';	
+                    	
                     	jQuery('#xyz_tbap_tbpost_permission_1').prop('checked',true);
+                    	
                     	jQuery('#xyz_tbap_tbpost_permission_no').removeClass('xyz_tbap_toggle_on');
                     	jQuery('#xyz_tbap_tbpost_permission_no').addClass('xyz_tbap_toggle_off');
+                    	
                     	jQuery('#xyz_tbap_tbpost_permission_yes').removeClass('xyz_tbap_toggle_off');
                     	jQuery('#xyz_tbap_tbpost_permission_yes').addClass('xyz_tbap_toggle_on');
                     }	
-                }
-                wasSaving = isSaving;
-            },
+				}
         }
-    })();
-    wp.data.subscribe( appuntiStatusChange.refreshMetabox );
+		});
+    
+   }
 });
+/*************************************************************************************/
+
+
 function displaycheck_tbap()
 {
 var tbcheckid=jQuery("input[name='xyz_tbap_tbpost_permission']:checked").val();
@@ -242,7 +270,8 @@ if (isset($_GET['post']))
 	$postid=intval($_GET['post']);
 $post_permission=1;
 $get_post_meta_future_data='';
-if (get_option('xyz_tbap_default_selection_edit')==2 && isset($GLOBALS['edit_flag']) && $GLOBALS['edit_flag']==1 && !empty($postid))
+$get_post_meta=get_post_meta($postid,"xyz_tbap",true);
+if (((get_option('xyz_tbap_default_selection_edit')==2 && isset($GLOBALS['edit_flag'])) || (get_option('xyz_tbap_default_selection_create')==2 && $get_post_meta!=1))  && !empty($postid))
 	$get_post_meta_future_data=get_post_meta($postid,"xyz_tbap_future_to_publish",true);
 	if (!empty($get_post_meta_future_data)&& isset($get_post_meta_future_data['xyz_tbap_tbpost_media_permission']))
 	{

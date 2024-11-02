@@ -97,15 +97,6 @@ if( !defined('ABSPATH') ){ exit();}
 		</td>
 	</tr>
 		<tr>
-		<td> <?php _e('Publish to facebook groups','auto-publish-tumblr'); ?> </td>
-		<td><img src="<?php echo plugins_url("images/cross.png",XYZ_TBAP_PLUGIN_FILE);?>">
-		</td>
-		<td><img src="<?php echo plugins_url("images/tick.png",XYZ_TBAP_PLUGIN_FILE);?>">
-		</td>
-		<td><img src="<?php echo plugins_url("images/tick.png",XYZ_TBAP_PLUGIN_FILE);?>">
-		</td>
-	</tr>
-	<tr>
 		<td> <?php _e('Publish to twitter profile','auto-publish-tumblr'); ?> </td>
 		<td><img src="<?php echo plugins_url("images/cross.png",XYZ_TBAP_PLUGIN_FILE);?>">
 		</td>
@@ -215,6 +206,15 @@ if( !defined('ABSPATH') ){ exit();}
 		</td>
 	</tr>
 	<tr>
+	<td> <?php _e('Option to use post categories as hash tags','auto-publish-tumblr'); ?> </td>
+	<td><img src="<?php echo plugins_url("images/cross.png",XYZ_TBAP_PLUGIN_FILE);?>">
+	</td>
+	<td><img src="<?php echo plugins_url("images/tick.png",XYZ_TBAP_PLUGIN_FILE);?>">
+	</td>
+	<td><img src="<?php echo plugins_url("images/tick.png",XYZ_TBAP_PLUGIN_FILE);?>">
+	</td>
+</tr>
+	<tr>
 		<td> <?php _e('Enable/Disable SSL peer verification','auto-publish-tumblr'); ?> </td>
 		<td><img src="<?php echo plugins_url("images/tick.png",XYZ_TBAP_PLUGIN_FILE);?>">
 		</td>
@@ -273,7 +273,7 @@ if( !defined('ABSPATH') ){ exit();}
 	<!-- Video Options  -->
 	<tr>
 	<td rowspan="4"><h4> <?php _e('Video/Audio Options','auto-publish-tumblr'); ?> </h4></td>
-		<td> <?php _e('Publish video to facebook, tumblr, Linkedin, Instagram and twitter along with post content','auto-publish-tumblr'); ?> </td>
+		<td> <?php _e('Publish video to facebook, tumblr, Linkedin, Pinterest, Instagram and twitter along with post content','auto-publish-tumblr'); ?> </td>
 		<td><img src="<?php echo plugins_url("images/cross.png",XYZ_TBAP_PLUGIN_FILE);?>">
 		</td>
 		<td><img src="<?php echo plugins_url("images/tick.png",XYZ_TBAP_PLUGIN_FILE);?>">

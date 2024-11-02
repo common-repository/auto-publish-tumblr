@@ -3,7 +3,7 @@
  Plugin Name: WP Tumblr Auto Publish
 Plugin URI: https://xyzscripts.com/wordpress-plugins/tumblr-auto-publish/
 Description:   Publish posts automatically from your blog to Tumblr social media. You can publish your posts to Tumblr as simple text message, text message with link or image. The plugin supports filtering posts by post-types and categories.
-Version: 1.2.2
+Version: 1.2.4
 Author: xyzscripts.com
 Author URI: https://xyzscripts.com/
 License: GPLv2 or later
